@@ -1,7 +1,4 @@
-package com.bettinganalysis.bet.domain.model
-
-import BetSelectionResult;
-
+package com.bettinganalysis.bet.domain.model;
 
 public class Bet{
     protected BetSelectionResult result;

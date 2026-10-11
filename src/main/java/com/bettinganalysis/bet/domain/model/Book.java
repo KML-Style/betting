@@ -1,4 +1,4 @@
-package com.bettinganalysis.bet.domain.model
+package com.bettinganalysis.bet.domain.model;
 
 public enum Book{
     WINAMAX,
