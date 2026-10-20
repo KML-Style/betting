@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "bet_selection")
@@ -30,4 +31,7 @@ public class BetSelection {
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 20)
     private BetSelectionResult result = BetSelectionResult.IN_PROGRESS;
+
+    @Column(name = "game_date", nullable = false)
+    private LocalDate date;
 }

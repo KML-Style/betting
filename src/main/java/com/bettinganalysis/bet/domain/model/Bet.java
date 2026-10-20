@@ -2,7 +2,9 @@ package com.bettinganalysis.bet.domain.model;
 
 import jakarta.persistence.*;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import lombok.*;
 
@@ -85,6 +87,10 @@ public class Bet{
         } else {
             result = BetSelectionResult.WON;
         }
+    }
+
+    public LocalDate getDate() {
+        return selections.stream().map(BetSelection::getDate).max(Comparator.naturalOrder()).orElse(null);
     }
 
     private static double round(double value, int decimals) {
